@@ -12,4 +12,4 @@ wavfile.write(decoded, rate=rate, data=data8bit)
 
 
 # 1.2 Mb *.bin
-# 1.8 Mb *.wav
+# 0.9 Mb *.wav
