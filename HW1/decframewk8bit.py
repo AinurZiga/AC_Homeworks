@@ -7,8 +7,11 @@ binfile = "encoded8bit.bin"
 decoded = "decoded8bit.wav"
 rate = 16000
 
-data8bit = pickle.load(open(binfile, "rb"), encoding='int8')
-wavfile.write(decoded, rate=rate, data=data8bit)
+d = pickle.load(open(binfile, "rb"), encoding='int8')
+idx, step_size = d[0], d[1]
+data8bit = idx * step_size
+
+#wavfile.write(decoded, rate=rate, data=data8bit)
 
 
 # 1.2 Mb *.bin
